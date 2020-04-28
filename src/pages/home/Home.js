@@ -18,8 +18,6 @@ import BackgroundImage from '../../img/paper.png';
 import Lyrics from './Lyrics';
 import Birds from './Birds';
 
-
-
 const useStyles = makeStyles((theme) => ({
   app: {
     position: 'relative',
