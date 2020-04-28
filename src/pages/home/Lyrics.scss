@@ -1,0 +1,27 @@
+.Lyrics {
+    padding: 3em;
+    opacity: 0.2;
+    top: -100%;
+    position: absolute;
+    animation-name: lyrics;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+
+.Lyrics:nth-of-type(2){
+    animation-delay: 15s;
+}
+
+
+@keyframes lyrics {
+    0% {
+        top: -100%
+    }
+
+    100% {
+        top: 102%;
+    }
+}
