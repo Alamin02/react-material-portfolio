@@ -1,5 +1,5 @@
 import React from 'react';
-import clsx from 'clsx';
+import { Link } from "react-router-dom";
 import Box from '@material-ui/core/Box';
 import CardMedia from '@material-ui/core/CardMedia';
 import { makeStyles } from '@material-ui/core/styles';
@@ -85,7 +85,7 @@ export default function Home() {
             <Grid container spacing={10}>
               <Grid item xs={6} sm={3}>
                 <Card>
-                  <CardActionArea>
+                  <CardActionArea component={Link} to={`/career`}>
                     <Typography>
                       <HowToRegOutlinedIcon className={classes.icon} />
                     </Typography>
@@ -96,7 +96,7 @@ export default function Home() {
 
               <Grid item xs={6} sm={3}>
                 <Card>
-                  <CardActionArea>
+                  <CardActionArea component={Link} to={`/projects`}>
                     <Typography>
                       <EmojiFoodBeverageOutlinedIcon className={classes.icon} />
                     </Typography>
@@ -106,7 +106,7 @@ export default function Home() {
               </Grid>
               <Grid item xs={6} sm={3}>
                 <Card>
-                  <CardActionArea>
+                  <CardActionArea component={Link} to={`/academics`}>
                     <Typography>
                       <CollectionsBookmarkOutlinedIcon
                         className={classes.icon}
@@ -118,7 +118,7 @@ export default function Home() {
               </Grid>
               <Grid item xs={6} sm={3}>
                 <Card>
-                  <CardActionArea>
+                  <CardActionArea component={Link} to={`/others`}>
                     <Typography>
                       <AudiotrackOutlinedIcon className={classes.icon} />
                     </Typography>

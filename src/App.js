@@ -1,6 +1,6 @@
 import React from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
-import Home from './pages/home/Home';
+import { Switch, Route } from 'react-router-dom';
+import { Home, Navigation, Career } from './pages';
 
 export default function App() {
   return (
@@ -10,7 +10,18 @@ export default function App() {
           <Home />
         </Route>
         <Route path='/career'>
-          Something else
+          <Navigation>
+            <Career />
+          </Navigation>
+        </Route>
+        <Route path='/academics'>
+          <Navigation />
+        </Route>
+        <Route path='/projects'>
+          <Navigation />
+        </Route>
+        <Route path='/others'>
+          <Navigation />
         </Route>
       </Switch>
     </>
