@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { Home, Navigation, Career } from './pages';
+import { Home, Navigation, Career, Academics, Projects, Others } from './pages';
 
 export default function App() {
   return (
@@ -15,13 +15,19 @@ export default function App() {
           </Navigation>
         </Route>
         <Route path='/academics'>
-          <Navigation />
+          <Navigation>
+            <Academics />
+          </Navigation>
         </Route>
         <Route path='/projects'>
-          <Navigation />
+          <Navigation>
+            <Projects />
+          </Navigation>
         </Route>
         <Route path='/others'>
-          <Navigation />
+          <Navigation>
+            <Others />
+          </Navigation>
         </Route>
       </Switch>
     </>
