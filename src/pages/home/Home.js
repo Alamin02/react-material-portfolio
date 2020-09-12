@@ -14,7 +14,6 @@ import AudiotrackOutlinedIcon from '@material-ui/icons/AudiotrackOutlined';
 import CollectionsBookmarkOutlinedIcon from '@material-ui/icons/CollectionsBookmarkOutlined';
 import EmojiFoodBeverageOutlinedIcon from '@material-ui/icons/EmojiFoodBeverageOutlined';
 import HowToRegOutlinedIcon from '@material-ui/icons/HowToRegOutlined';
-import BackgroundImage from '../../img/paper.png';
 import Lyrics from './Lyrics';
 import Birds from './Birds';
 
@@ -22,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
   app: {
     position: 'relative',
     overflow: 'hidden',
-    background: `url(${BackgroundImage})`,
   },
   root: {
     minHeight: '100vh',

@@ -12,6 +12,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
+import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
@@ -26,6 +27,8 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    flexGrow: 1,
+    minHeight: '100vh'
   },
   drawer: {
     [theme.breakpoints.up('sm')]: {
@@ -46,7 +49,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   // necessary for content to be below app bar
-  toolbar: theme.mixins.toolbar,
+  toolbar: {
+    ...theme.mixins.toolbar,
+  },
+  toolbarRoot: {
+    backgroundColor: 'black'
+  },
   drawerPaper: {
     width: drawerWidth,
   },
@@ -106,7 +114,7 @@ function Navigation(props) {
     <div className={classes.root}>
       <CssBaseline />
       <AppBar position='fixed' className={classes.appBar}>
-        <Toolbar>
+        <Toolbar className={classes.toolbarRoot}>
           <IconButton
             color='inherit'
             aria-label='open drawer'

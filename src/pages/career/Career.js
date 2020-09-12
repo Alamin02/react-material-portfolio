@@ -2,13 +2,14 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
-import { Box, Grid, CardMedia } from '@material-ui/core';
+import { Box, Grid } from '@material-ui/core';
 
 const useStyles = makeStyles({
   companyLogo: {
     height: 80,
     width: 100,
     objectFit: 'contain',
+    border: 'solid 0.1rem',
   },
 });
 
@@ -21,6 +22,35 @@ export default function Career() {
         Experience
       </Typography>
       <Divider />
+
+      <Box marginTop={5} marginBottom={5}>
+        <Box marginBottom={1}>
+          <Grid container spacing={2}>
+            <Grid item>
+              <img
+                src={require('../../img/automatio-logo.png')}
+                className={classes.companyLogo}
+                alt={"Walton"}
+              />
+            </Grid>
+            <Grid item>
+              {/* TODO: Add Company Website */}
+              <Typography variant='h6'>Software Engieer</Typography>
+              <Typography variant='subtitle1'>
+                Automatio.co
+            </Typography>
+              <Typography variant='subtitle2'>June 2019 - Present</Typography>
+            </Grid>
+          </Grid>
+        </Box>
+
+        <Typography variant='body1'>
+          automatio.co is a tool for automating, scraping and mining data from any website under few minutes. You can install it as Chrome Extension, go to website, select what you want to scrape, setup scheduling and pagination. It can go beyond authenticated pages, captcha and much more!
+        </Typography>
+        <Typography variant='body1'>
+          I primarily work on the backend and the Scraper where I have to deal with GraphQL, Redis, PubSub, etc. Also I optimize and update frontend and the extension on demand.
+        </Typography>
+      </Box>
 
       <Box marginTop={5} marginBottom={5}>
         <Grid container spacing={2}>
@@ -55,45 +85,6 @@ export default function Career() {
           </ul>
         </Typography>
       </Box>
-
-      <Box marginTop={5} marginBottom={5}>
-        <Grid container spacing={2}>
-          <Grid item>
-            <img
-              src={require('../../img/automatio-logo.png')}
-              className={classes.companyLogo}
-              alt={"Walton"}
-            />
-          </Grid>
-          <Grid item>
-              {/* TODO: Add Company Website */}
-            <Typography variant='h6'>Software Engieer</Typography>
-            <Typography variant='subtitle1'>
-              Automatio.co
-            </Typography>
-            <Typography variant='subtitle2'>June 2019 - Present</Typography>
-          </Grid>
-        </Grid>
-
-        <Typography variant='body1'>
-          <ul>
-            <li>
-              Product manager of "Access control and time attendance product".
-            </li>
-            <li>Hardware sourcing and development planning.</li>
-            <li>
-              Design and develop hardware-software integrated solution in
-              collaboration with an international team.
-            </li>
-            <li>Monitor the overall process.</li>
-          </ul>
-        </Typography>
-      </Box>
-
-      <Typography variant='h2' gutterBottom>
-        Entrepreneurship
-      </Typography>
-      <Divider />
     </div>
   );
 }

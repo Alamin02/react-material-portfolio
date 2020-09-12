@@ -1,10 +1,13 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { Home, Navigation, Career, Academics, Projects, Others } from './pages';
+import BackgroundImage from './img/paper.png';
 
 export default function App() {
   return (
-    <>
+    <div style={{
+      background: `url(${BackgroundImage})`,
+    }}>
       <Switch>
         <Route exact path='/'>
           <Home />
@@ -30,6 +33,6 @@ export default function App() {
           </Navigation>
         </Route>
       </Switch>
-    </>
+    </div>
   );
 }
