@@ -35,11 +35,11 @@ export default function Career() {
             </Grid>
             <Grid item>
               {/* TODO: Add Company Website */}
-              <Typography variant='h6'>Software Engieer</Typography>
+              <Typography variant='h6'>Software Engineer</Typography>
               <Typography variant='subtitle1'>
                 Automatio.co
             </Typography>
-              <Typography variant='subtitle2'>June 2019 - Present</Typography>
+              <Typography variant='subtitle2'>April 2020 - Present</Typography>
             </Grid>
           </Grid>
         </Box>
@@ -67,7 +67,7 @@ export default function Career() {
               Computer Research and Development · Walton Digitech Industries
               Ltd.
             </Typography>
-            <Typography variant='subtitle2'>June 2019 - Present</Typography>
+            <Typography variant='subtitle2'>June 2019 - April 2020</Typography>
           </Grid>
         </Grid>
 
@@ -85,6 +85,40 @@ export default function Career() {
           </ul>
         </Typography>
       </Box>
+
+      <Box marginTop={5} marginBottom={5}>
+        <Grid container spacing={2}>
+          <Grid item>
+            <img
+              src={require('../../img/upwork.png')}
+              className={classes.companyLogo}
+              alt={"Walton"}
+            />
+          </Grid>
+          <Grid item>
+            <Typography variant='h6'>Freelance Software Developer</Typography>
+            <Typography variant='subtitle1'>
+              Upwork
+            </Typography>
+            <Typography variant='subtitle2'>January 2019 - Present</Typography>
+          </Grid>
+        </Grid>
+
+        <Typography variant='body1'>
+          <ul>
+            <li>
+              Have successfully completed multiple client projects.
+            </li>
+            <li>Offers development service in Python and JavaScript base frameworks</li>
+            <li>
+              Communicative and committed for on-time delivery.
+            </li>
+            <li>Completed projects involves React, Firebase, Laravel etc.</li>
+          </ul>
+        </Typography>
+      </Box>
+
+
     </div>
   );
 }
