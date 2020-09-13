@@ -90,8 +90,8 @@ export default function Home() {
 
           <Box className={classes.info}>
             <Typography variant='h2'>Md. Al Amin</Typography>
-            <Typography variant='h4'>Gorib Engineer</Typography>
-            <Typography variant='subtitle1'>Dhaka, Bangladesh</Typography>
+            <Typography variant='h5'>Software Engineer</Typography>
+            <Typography variant='subtitle1'>Loves Programming, Electronics, Music</Typography>
           </Box>
 
           <Box className={classes.attibuteContainer}>
