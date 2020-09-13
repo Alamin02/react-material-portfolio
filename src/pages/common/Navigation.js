@@ -19,6 +19,7 @@ import AudiotrackOutlinedIcon from '@material-ui/icons/AudiotrackOutlined';
 import CollectionsBookmarkOutlinedIcon from '@material-ui/icons/CollectionsBookmarkOutlined';
 import EmojiFoodBeverageOutlinedIcon from '@material-ui/icons/EmojiFoodBeverageOutlined';
 import HowToRegOutlinedIcon from '@material-ui/icons/HowToRegOutlined';
+import HomeIcon from '@material-ui/icons/HomeOutlined';
 
 
 const drawerWidth = 240;
@@ -76,8 +77,14 @@ function Navigation(props) {
   const drawer = (
     <div>
       <div className={classes.toolbar} />
-      <Divider/>
+      <Divider />
       <List>
+        <ListItem button component={Link} to={`/`}>
+          <ListItemIcon>
+            <HomeIcon />
+          </ListItemIcon>
+          <ListItemText primary='Home' />
+        </ListItem>
         <ListItem button component={Link} to={`/career`}>
           <ListItemIcon>
             <HowToRegOutlinedIcon />

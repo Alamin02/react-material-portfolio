@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Box from '@material-ui/core/Box';
 import CardMedia from '@material-ui/core/CardMedia';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Container, CardActionArea, Card } from '@material-ui/core';
+import { Grid, Container, CardActionArea, Card, Link as MaterialLink } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -127,18 +127,26 @@ export default function Home() {
             </Grid>
           </Box>
           <Box>
-            <Button className={classes.button} startIcon={<FacebookIcon />}>
-              Facebook
+            <MaterialLink href='https://github.com/Alamin02' target="_blank">
+              <Button className={classes.button} startIcon={<GitHubIcon />}>
+                Github
             </Button>
-            <Button className={classes.button} startIcon={<GitHubIcon />}>
-              Github
+            </MaterialLink>
+            <MaterialLink href='https://www.linkedin.com/in/alamin02/' target="_blank">
+              <Button className={classes.button} startIcon={<LinkedInIcon />}>
+                LinkedIn
             </Button>
-            <Button className={classes.button} startIcon={<LinkedInIcon />}>
-              LinkedIn
+            </MaterialLink>
+            <MaterialLink href='mailto:alamin.ece.ku@gmail.com' target="_blank">
+              <Button className={classes.button} startIcon={<ContactMailIcon />}>
+                Email
             </Button>
-            <Button className={classes.button} startIcon={<ContactMailIcon />}>
-              Email
+            </MaterialLink>
+            <MaterialLink href='https://www.facebook.com/alamin.ece.ku/' target="_blank">
+              <Button className={classes.button} startIcon={<FacebookIcon />}>
+                Facebook
             </Button>
+            </MaterialLink>
           </Box>
         </Box>
       </Container>
