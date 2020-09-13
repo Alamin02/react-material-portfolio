@@ -88,7 +88,6 @@ function Lyrics() {
   return (
     <React.Fragment>
     {lyrics}
-    {lyrics}
     </React.Fragment>
   )
 }

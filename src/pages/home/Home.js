@@ -14,6 +14,8 @@ import AudiotrackOutlinedIcon from '@material-ui/icons/AudiotrackOutlined';
 import CollectionsBookmarkOutlinedIcon from '@material-ui/icons/CollectionsBookmarkOutlined';
 import EmojiFoodBeverageOutlinedIcon from '@material-ui/icons/EmojiFoodBeverageOutlined';
 import HowToRegOutlinedIcon from '@material-ui/icons/HowToRegOutlined';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import {  useTheme } from '@material-ui/core/styles';
 import Lyrics from './Lyrics';
 import Birds from './Birds';
 
@@ -49,9 +51,15 @@ const useStyles = makeStyles((theme) => ({
     minWidth: '50vw',
     margin: 40,
   },
+  attribute: {
+
+  },
+  attributeActionArea: {
+    paddingTop: 20,
+    paddingBottom: 20,
+  },
   icon: {
     fontSize: 40,
-    marginTop: 20,
   },
   uppercase: {
     textTransform: 'uppercase'
@@ -60,6 +68,13 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Home() {
   const classes = useStyles();
+  const theme = useTheme();
+
+  console.log(theme);
+
+  const isMobile = useMediaQuery(theme.breakpoints.down('xs'), {
+    defaultMatches: true
+  });
 
   return (
     <div className={classes.app}>
@@ -80,10 +95,10 @@ export default function Home() {
           </Box>
 
           <Box className={classes.attibuteContainer}>
-            <Grid container spacing={10}>
-              <Grid item xs={6} sm={3}>
+            <Grid container spacing={isMobile ? 1 : 10}>
+              <Grid item xs={6} sm={6} lg={3}>
                 <Card>
-                  <CardActionArea component={Link} to={`/career`}>
+                  <CardActionArea component={Link} to={`/career`} className={classes.attributeActionArea} >
                     <Typography>
                       <HowToRegOutlinedIcon className={classes.icon} />
                     </Typography>
@@ -92,9 +107,9 @@ export default function Home() {
                 </Card>
               </Grid>
 
-              <Grid item xs={6} sm={3}>
+              <Grid item xs={6} sm={6} lg={3}>
                 <Card>
-                  <CardActionArea component={Link} to={`/projects`}>
+                  <CardActionArea component={Link} to={`/projects`} className={classes.attributeActionArea}>
                     <Typography>
                       <EmojiFoodBeverageOutlinedIcon className={classes.icon} />
                     </Typography>
@@ -102,9 +117,9 @@ export default function Home() {
                   </CardActionArea>
                 </Card>
               </Grid>
-              <Grid item xs={6} sm={3}>
+              <Grid item xs={6} sm={6} lg={3}>
                 <Card>
-                  <CardActionArea component={Link} to={`/academics`}>
+                  <CardActionArea component={Link} to={`/academics`} className={classes.attributeActionArea}>
                     <Typography>
                       <CollectionsBookmarkOutlinedIcon
                         className={classes.icon}
@@ -114,11 +129,11 @@ export default function Home() {
                   </CardActionArea>
                 </Card>
               </Grid>
-              <Grid item xs={6} sm={3}>
+              <Grid item xs={6} sm={6} lg={3}>
                 <Card>
-                  <CardActionArea component={Link} to={`/others`}>
+                  <CardActionArea component={Link} to={`/others`} className={classes.attributeActionArea}>
                     <Typography>
-                      <AudiotrackOutlinedIcon className={classes.icon} />
+                      <AudiotrackOutlinedIcon className={classes.icon}  />
                     </Typography>
                     <Typography variant='h5'>Others</Typography>
                   </CardActionArea>
