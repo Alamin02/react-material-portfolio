@@ -14,7 +14,7 @@ export default function Projects() {
             Programming Languages:
         </Typography>
           <Typography variant="body1">
-            C, C++, Python, JavaScript, Java, MATLAB
+          Python, JavaScript, TypeScript, C, C++,  Java, MATLAB
         </Typography>
         </Box>
 
