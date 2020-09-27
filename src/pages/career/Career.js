@@ -50,6 +50,9 @@ export default function Career() {
         <Typography variant='body1'>
           I primarily work on the backend and the Scraper where I have to deal with GraphQL, Redis, PubSub, etc. Also I optimize and update frontend and the extension on demand.
         </Typography>
+        <Typography variant='body1'>
+          Company Website: <a href="https://automatio.co/" target="_blank" rel="noopener noreferrer">https://automatio.co/</a>
+        </Typography>
       </Box>
 
       <Box marginTop={5} marginBottom={5}>
@@ -83,6 +86,9 @@ export default function Career() {
             </li>
             <li>Monitor the overall process.</li>
           </ul>
+        </Typography>
+        <Typography variant='body1'>
+          Company Website: <a target="_blank" rel="noopener noreferrer" href="https://waltonbd.com/">https://waltonbd.com/</a>
         </Typography>
       </Box>
 
